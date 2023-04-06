@@ -1,14 +1,15 @@
 import React from 'react';
 import './ExpenseItem.css';
 
-function ExpenseItem(){
+function ExpenseItem(props){
 
     return(
         <div className='expense-item'>
-            <div>April 5, 2023</div>
+            {/* Error occured for date solved: https://bobbyhadz.com/blog/react-objects-are-not-valid-as-react-child */}
+            <div>{props.date.toLocaleDateString()}</div>
             <div className='expense-item__description'>
-                <h2>Hair Oil</h2>
-                <div className='expense-item__price'>180</div>
+                <h2>{props.title}</h2>
+                <div className='expense-item__price'>${props.amount}</div>
             </div>
         </div>
     );
