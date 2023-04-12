@@ -8,7 +8,7 @@ const default_expenses = [
     id: 'e1',
     title: 'Toilet Paper',
     amount: 94.12,
-    date: new Date(2016, 11, 17),
+    date: new Date(2020, 11, 17),
   },
   { id: 'e2', title: 'New TV', amount: 799.49, date: new Date(2021, 2, 12) },
   {
@@ -30,13 +30,11 @@ function App() {
   const [expenses, setExpenses] = useState(default_expenses);
 
   const addExpenseHandler = (expense) => {
-    console.log(expense);
     setExpenses((prevExpense) => {
       return [expense, ...prevExpense];
 
     });
   }
-
   console.log(expenses);
 
   return (
